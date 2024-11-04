@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark;
+}
+
+@keyframes rotateX {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes rotateY {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(360deg);
+  }
+}
+
+.animated-text {
+  display: inline-block;
+  animation: rotateX 5s linear infinite, rotateY 5s linear infinite;
+}
+
+/* animation buttons */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(45deg, #ff5722, #ff9800, #ffc107, #ffeb3b);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Animation 3D pour le bouton */
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(45deg, #ff5722, #ff9800, #ffc107, #ffeb3b);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Animation de fond 3D */
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-bg {
+  background: linear-gradient(45deg, #ff5722, #ff9800, #ffc107, #ffeb3b);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+/* Animation 3D pour le bouton */
+
+html.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+html.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.animated-text {
+  opacity: 0;
+  animation: fadeIn 0.2s forwards;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Assurez-vous que les textes dans les inputs sont toujours blancs */
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input,
+textarea {
+  background: transparent !important;
+  color: white !important;
+}
+
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+.navbar.scrolled {
+  background-color: rgba(228, 225, 29, 0.8);
+}
+
+.animated-texts {
+  opacity: 1;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animated-border {
+  animation: border-animation 2s infinite;
+  margin-bottom: 20px;
+  border-radius: 10px; /* Add space between blocks */
+}
+@keyframes border-animation {
+  0% {
+    border-color: #ff7043;
+  }
+  50% {
+    border-color: #b48e07;
+  }
+  100% {
+    border-color: #caec0c;
+  }
+}
+
