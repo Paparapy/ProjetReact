@@ -33,7 +33,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed z-50 w-full py-2 text-white transition-colors duration-300 ${
+      className={`fixed z-50 w-full py-2 text-white transition-colors duration-1000 ${
         scrollPosition > 0
           ? "bg-gradient-to-r from-black via-orange-900 to-black bg-opacity-90"
           : "bg-gradient-to-r from-orange-700 via-black to-orange-900 bg-opacity-60"

@@ -5,7 +5,7 @@ import { checklistItems } from "../constants";
 
 const Workflow = () => {
   const [text, setText] = useState("");
-  const fullText = "Accélérez votre flux de travail de codage.";
+  const fullText = "Accélérez votre flux de travail.";
 
   useEffect(() => {
     let index = 0;
@@ -21,9 +21,8 @@ const Workflow = () => {
 
   return (
     <div className="mt-20">
-      <h2 className="z-30 py-5 mt-6 mb-10 text-3xl font-semibold tracking-wide text-center sm:text-3xl lg:text-5xl">
-        
-        <span className="text-transparent bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text animated-texts">
+      <h2 className="z-30 py-5 mt-6 mb-10 text-3xl font-semibold tracking-wide text-center sm:text-3xl lg:text-4xl">
+        <span className="block text-transparent bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text animated-texts">
           {text}
         </span>
       </h2>
