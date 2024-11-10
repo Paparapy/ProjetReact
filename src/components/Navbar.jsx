@@ -46,7 +46,7 @@ const Navbar = () => {
             <Link
               key={item.label}
               to={item.href}
-              className="px-4 py-1 text-blue-200 transition border border-transparent rounded-md shadow-sm bg-gradient-to-r shadow-orange-400 from-black via-orange-900 to-black bg-opacity-60 hover:bg-opacity-100 hover:border-white"
+              className="px-4 py-1 text-blue-200 transition border border-transparent rounded-md shadow-sm nav-link bg-gradient-to-r shadow-orange-400 from-black via-orange-900 to-black bg-opacity-60 hover:bg-opacity-100 hover:border-white"
             >
               {item.label}
             </Link>

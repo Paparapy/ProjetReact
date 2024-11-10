@@ -4,7 +4,7 @@ const Testimonial = () => {
   return (
     <div className="mt-20 tracking-wide">
       <h2 className="my-10 text-3xl font-semibold text-center text-orange-900 sm:text-4xl lg:text-6xl lg:my-20">
-        <span className="dark:text-white">Ce que</span> les gens disent
+        <span className="dark:text-orange-600">Ce que</span> les gens disent
       </h2>
 
       {/* integration testimonial */}

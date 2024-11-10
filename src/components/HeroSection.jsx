@@ -15,7 +15,7 @@ const HeroSection = () => {
     const interval = setInterval(() => {
       setText(fullText.slice(0, index + 1));
       index = (index + 1) % fullText.length;
-    }, 150); // Adjust the speed of the animation here
+    }, 150);
     return () => clearInterval(interval);
   }, []);
 
@@ -27,13 +27,24 @@ const HeroSection = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
   };
 
+  // Gestionnaire de mouvement de la souris
+  const handleMouseMove = (e) => {
+    const waveEffect = document.getElementById("wave-effect");
+    const pointerX = e.clientX;
+    const pointerY = e.clientY;
+    const waveSize = 50; // La moitié de la taille de la vague pour centrer l'effet
+    waveEffect.style.left = `${pointerX - waveSize}px`;
+    waveEffect.style.top = `${pointerY - waveSize}px`;
+  };
+
   return (
-    <div className="flex flex-col items-center min-h-screen sm:mt-10 lg:flex-row lg:mt-2">
+    <div className="relative flex flex-col items-center min-h-screen sm:mt-10 lg:flex-row lg:mt-2" onMouseMove={handleMouseMove}>
+      <div id="wave-effect" className="absolute w-32 h-32 bg-blue-500 rounded-full opacity-50 pointer-events-none"></div>
       <div className="lg:w-1/2 lg:pr-8">
         <h1 className="font-semibold tracking-wide text-left sm:text-2xl lg:text-4xl sm:text-center lg:text-left">
           Création design <br />
           <span className="font-bold text-transparent bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text animated-texts">
-            {" "}{text}
+            {text}
           </span>
         </h1>
         <p className="lg:mt-10 sm:mt-6 lg:text-lg sm:text-center lg:text-left sm:text-sm">
@@ -69,7 +80,7 @@ const HeroSection = () => {
             muted
             key={currentVideo}
             className="duration-500"
-            style={{ borderRadius: '2%' }} // Adding inline style for rounded corners
+            style={{ borderRadius: "2%" }}
           >
             <source src={videos[currentVideo]} type="video/mp4" />
             Your Browser does not support the video.
