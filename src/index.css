@@ -198,7 +198,7 @@ textarea {
   height: 100px;
   background: radial-gradient(
     circle,
-    rgba(238, 255, 0, 0.7) 30%,
+    rgba(255, 221, 0, 0.7) 30%,
     rgba(255, 183, 0, 0.4) 50%,
     rgba(231, 48, 7, 0) 70%
   );
@@ -216,4 +216,12 @@ textarea {
     transform: translate(-50%, -50%) scale(1.5);
     opacity: 0;
   }
+}
+
+.feature-card {
+  @apply transition-transform transform;
+}
+.feature-card:hover {
+  @apply scale-105 shadow-orange-900;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }

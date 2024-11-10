@@ -4,7 +4,7 @@ import { pricingOptions } from "../constants";
 const Pricing = () => {
   return (
     <div className="mt-20">
-      <h2 className="my-8 text-3xl font-semibold tracking-wide text-center text-orange-900 sm:text-4xl lg:text-6xl">
+      <h2 className="my-8 text-3xl font-semibold tracking-wide text-center text-orange-900 sm:text-3xl lg:text-6xl">
         Tarification
       </h2>
 
@@ -17,7 +17,7 @@ const Pricing = () => {
               <p className="mb-8 lg:text-4xl sm:text-2xl">
                 {option.title}
                 {option.title === "Pro" && (
-                  <span className="mb-4 ml-2 text-xl text-transparent bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text">
+                  <span className="mb-4 ml-2 lg:text-xl sm:text-[12px] text-transparent text bg-gradient-to-r from-orange-500 to-red-800 bg-clip-text">
                     (Le plus populaire)
                   </span>
                 )}
@@ -26,14 +26,14 @@ const Pricing = () => {
                 <span className="mt-6 mr-2 lg:text-4xl sm:text-2xl">
                   {option.price}
                 </span>
-                <span className="tracking-tight text-neutral-400">/mois</span>
+                <span className="tracking-tight lg:text-2xl sm:text-[15px] text-neutral-400">/mois</span>
               </p>
 
               <ul>
                 {option.features.map((feature, index) => (
                   <li key={index} className="flex items-center mt-8">
                     <CheckCircle2 />
-                    <span className="ml-2 lg:text-[20px] sm:text-[15px]">
+                    <span className="ml-2 lg:text-[20px] sm:text-[12px]">
                       {feature}
                     </span>
                   </li>
@@ -41,7 +41,7 @@ const Pricing = () => {
               </ul>
               <a
                 to="#"
-                className="inline-flex items-center justify-center w-full p-5 lg:text-[20px] sm:text-[15px] tracking-tight text-center text-orange-800 transition duration-200 border border-orange-900 rounded-lg cursor-pointer lg:h-12 sm:h-8 lg:mt-20 sm:mt-6 hover:bg-yellow-900 hover:text-yellow-200"
+                className="inline-flex items-center justify-center w-full p-5 lg:text-[20px] sm:text-[12px] tracking-tight text-center text-orange-800 transition duration-200 border border-orange-900 rounded-lg cursor-pointer lg:h-12 sm:h-8 lg:mt-20 sm:mt-6 hover:bg-yellow-900 hover:text-yellow-200"
               >
                 S'abonner
               </a>
